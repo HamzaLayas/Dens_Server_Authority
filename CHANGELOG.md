@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3
+
+* Expanded the player guide with installation, configuration, backup, update, compatibility, and troubleshooting help.
+* Added 13 FAQ pages covering server setup, characters, saves, performance, updates, and support.
+* Added the full release history to the Hexium changelog. Gameplay behavior is unchanged.
+
 ## 0.2.2
 
 * Public downloads and support now use Den's Server Authority on GitHub.
