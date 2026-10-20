@@ -22,7 +22,7 @@ The installer ZIP contains only the plugin DLL. Use this ZIP to install the mod.
 * Persistent objects remain server-owned. Players receive short permissions for actions such as riding, using carts, picking up items, and editing signs.
 * Ships remain server-owned while players sail them.
 * Chests, ship cargo, cart storage, and tombstones use server-validated inventory sessions. The server records item moves in `BepInEx/config/ServerAuthority/audit/`.
-* Characters are stored on the server in `BepInEx/config/ServerAuthority/characters/`, with rotating and daily backups. Offline character edits are ignored.
+* Characters are stored on the server in `BepInEx/config/ServerAuthority/characters-v2/`, with rotating and daily backups. Offline character edits are ignored. Characters from 0.2.x move there automatically on first login.
 * Unauthorized object changes are rejected and resynchronized. Sustained abuse can result in a kick.
 * Optional network tuning and client ship prediction are disabled by default.
 
@@ -50,6 +50,6 @@ Install world-behavior mods on the dedicated server, since it runs the simulatio
 
 UI and inventory mods use the normal inventory interface. EquipmentAndQuickSlots' separate character backup restore is disabled while Server Authority stores characters. BetterNetworking disables this mod's network tuning.
 
-Back up data and stop the server and clients before updating. Update every installation together and keep only one copy of the DLL.
+Back up data and stop the server and clients before updating. Update every installation together and keep only one copy of the DLL. Version 0.3.0 can't be mixed with 0.2.x on either side.
 
 [Downloads](https://github.com/HamzaLayas/Dens_Server_Authority/releases) · [Help and issues](https://github.com/HamzaLayas/Dens_Server_Authority/issues)

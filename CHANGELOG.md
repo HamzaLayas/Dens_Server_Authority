@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.3.0
+
+Major update. The server and every player must update to 0.3.0 together; older versions can't join a 0.3.0 server and are told which version to install. Back up the server before updating (see the update guide).
+
+* Joining is checked step by step: your character is only loaded after the server has accepted you, and the server tells you clearly if your installation is missing something it needs.
+* Characters are stored more safely. A save is confirmed only once it is on disk, a repeated save is never applied twice, and a damaged or unreadable character is never replaced by a new or imported one.
+* Existing characters move to the new storage automatically the first time each player joins. The old files stay untouched, and a backup copy is made first. In rare cases where an old record could belong to two different character names, the server asks the admin to confirm it before that character can join.
+* Saves your game couldn't deliver (for example after a disconnect) are kept and sent again when you reconnect, including several saves in a row. A save the server can't accept is kept on your PC instead of being deleted.
+* If your character from the server can't be loaded, you are returned to the menu with a message and your local character is left as it was.
+* Fixed: a modified client could freeze a world object for every player by sending an extreme update. Such updates are now ignored.
+* Players exploring at the same time get new areas loaded fairly, and the per-frame limit on ownership changes is exact.
+* More reliable compatibility checks after game updates.
+
 ## 0.2.3
 
 * Expanded the player guide with installation, configuration, backup, update, compatibility, and troubleshooting help.
